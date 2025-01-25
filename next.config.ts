@@ -14,6 +14,16 @@ const nextConfig: NextConfig = {
         hostname: "t3.ftcdn.net",
         pathname: "**"
       },
+      {
+        protocol: "https",
+        hostname: "flagsapi.com",
+        pathname: "**"
+      },
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
+        pathname: "**"
+      },
     ]
   }
 };

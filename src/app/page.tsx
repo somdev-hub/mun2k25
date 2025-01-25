@@ -1,4 +1,5 @@
 import { Timeline } from "@/components/ui/timeline";
+import { JSX } from "react";
 import Image from "next/image";
 import { FaCalendar, FaClock } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
@@ -9,9 +10,13 @@ import {
   AccordionTrigger
 } from "@/components/ui/accordion";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { timeline } from "@/utils/timeline";
 
 export default function Home() {
-  const data = [
+  const data: {
+    title: string;
+    content: JSX.Element;
+  }[] = [
     {
       title: "17th Feb, Monday",
       content: (
@@ -162,6 +167,33 @@ export default function Home() {
     }
   ];
 
+  const timeline_data: {
+    title: string;
+    content: JSX.Element;
+  }[] = timeline.map((item) => {
+    return {
+      title: item.time,
+      content: (
+        <div>
+          <h2 className="text-[2rem] text-violet mb-2">{item.heading}</h2>
+          <p>{item.subheading}</p>
+          <div className="grid grid-cols-2 gap-4 mt-6">
+            {item.images.map((image, index) => (
+              <Image
+                key={index}
+                src={image}
+                alt="startup template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            ))}
+          </div>
+        </div>
+      )
+    };
+  });
+
   const agenda = [
     "World Peace: steps taken to ensure peace",
     "Economic policies for healthy international trade",
@@ -309,6 +341,29 @@ export default function Home() {
     }
   ];
 
+  const countries = [
+    "AF",
+    "PK",
+    "IN",
+    "CN",
+    "BD",
+    "MV",
+    "RU",
+    "JP",
+    "KR",
+    "US",
+    "GB",
+    "FR",
+    "DE",
+    "CA",
+    "AU",
+    "BR",
+    "IL",
+    "EG",
+    "UA",
+    "SA"
+  ];
+
   return (
     <div className="">
       <div className="mt-[8rem] px-12 flex justify-between items-center">
@@ -325,10 +380,10 @@ export default function Home() {
           <h3 className="font-lilita-one text-[2.5rem]">
             Shaping Tomorrow Through Diplomacy Today.
           </h3>
-            <button className="font-lilita-one text-white bg-violet rounded-md px-8 mt-4 py-3 text-[1.25rem] hover:bg-white hover:text-black hover:shadow-xl transition-colors duration-300 flex items-center gap-2 group">
+          <button className="font-lilita-one text-white bg-violet rounded-md px-8 mt-4 py-3 text-[1.25rem] hover:bg-white hover:text-black hover:shadow-xl transition-colors duration-300 flex items-center gap-2 group">
             Register Now
             <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-2" />
-            </button>
+          </button>
           <div className="flex gap-8 font-lilita-one text-blue mt-6">
             <div className="flex gap-4 items-center text-[1.75rem]">
               <FaCalendar />
@@ -383,12 +438,12 @@ export default function Home() {
       <div className="mt-[6rem] px-8">
         <h1 className="text-center text-[2.5rem]">TIMELINE</h1>
         <div className="mt-4">
-          <Timeline data={data} />
+          <Timeline data={timeline_data} />
         </div>
       </div>
 
-      <div className="mt-[6rem] px-8 py-[4rem] bg-[#eeeeee]">
-        <h1 className="text-center text-[2.5rem]">COMMETTIES</h1>
+      <div className="mt-[6rem] px-[8rem] py-[4rem] bg-[#eeeeee]">
+        <h1 className="text-center text-[2.5rem]">COMMITTEES</h1>
         <div className="mt-12 flex gap-[8rem] justify-center items-end">
           <Image
             src={"/assets/disec.svg"}
@@ -403,6 +458,22 @@ export default function Home() {
             alt="unhrc"
           />
           <Image src={"/assets/unep.svg"} height="150" width="150" alt="unep" />
+        </div>
+        <h1 className="text-center text-[2.5rem] mt-[4rem]">COUNTRIES</h1>
+        <div className="mt-12 flex flex-wrap gap-12 items-center justify-between">
+          {countries.map((country, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center h-[5rem] w-[8rem] relative"
+            >
+              <Image
+                src={`https://flagcdn.com/${country.toLowerCase()}.svg`}
+                alt={country}
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          ))}
         </div>
       </div>
       <div className="mt-[6rem] px-[8rem] py-6">
