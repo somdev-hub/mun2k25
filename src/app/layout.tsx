@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const daysOne = Days_One({
   variable: "--font-days-one",
@@ -57,19 +58,21 @@ export default function RootLayout({
         ${montserrat.variable} 
           antialiased`}
       >
-        <nav className="fixed top-0 w-full z-[100]">
+        <nav className="fixed top-0 w-full z-[100] shadow">
           <div className="flex justify-between items-center py-2 px-12 bg-blue">
             <div className="">
-              <h3>
-                <span
-                  className={`font-lalezar text-white  sm-text-shadow text-[2.5rem]`}
-                >
-                  MUN
-                </span>{" "}
-                <span className="font-lemon text-white sm-text-shadow-violet text-[2rem] ">
-                  2K25
-                </span>
-              </h3>
+              <Link href={"/"}>
+                <h3>
+                  <span
+                    className={`font-lalezar text-white  sm-text-shadow text-[2.5rem]`}
+                  >
+                    MUN
+                  </span>{" "}
+                  <span className="font-lemon text-white sm-text-shadow-violet text-[2rem] ">
+                    2K25
+                  </span>
+                </h3>
+              </Link>
             </div>
             <div className="">
               <button className="bg-white text-black px-6 font-lilita-one text-[1.125rem] py-2 rounded-md hover:bg-pink hover:text-white transition-all duration-300">
@@ -79,11 +82,11 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
-        <footer>
-          <div className="bg-blue px-8 xl:px-[5.5rem] py-12 mt-[4rem] flex flex-col sm:flex-row items-center justify-between text-white gap-16">
+        <footer className="">
+          <div className="bg-blue px-8 xl:px-[5.5rem] py-12  flex flex-col sm:flex-row items-center justify-between text-white gap-16">
             <div className=" flex flex-col sm:flex-row items-center justify-center">
               <div className="flex gap-12 items-center md:flex-col lg:flex-row justify-around">
-                <div className="h-[6rem] w-[6rem] lg:h-[12rem] lg:w-[11rem] flex items-center justify-center relative">
+                <div className="h-[6rem] w-[6rem] lg:h-[9rem] lg:w-[10rem] flex items-center justify-center relative">
                   <Image
                     loading="lazy"
                     src={"/assets/literary-logo-white.svg"}
@@ -93,7 +96,7 @@ export default function RootLayout({
                   />
                 </div>
 
-                <div className="lg:w-[13rem] lg:h-[6rem] w-[11rem] h-[4rem] flex items-center justify-center md:mt-4 lg:mt-0 relative">
+                <div className="lg:w-[12rem] lg:h-[5rem] w-[11rem] h-[4rem] flex items-center justify-center md:mt-4 lg:mt-0 relative">
                   <Image
                     src="/assets/silicon-logo.png"
                     className="w-full h-full"
@@ -109,7 +112,7 @@ export default function RootLayout({
             <div className=" flex xl:gap-12 flex-col lg:flex-row  mt-8 sm:mt-0">
               <div className="">
                 <p className="font-[600] text-[1.5rem] underline">VENUE</p>
-                <p className=" mt-2 text-[1.25rem]">
+                <p className=" mt-2 text-[1.125rem]">
                   Gallery 1, <br />
                   Silicon Institute of Technology <br />
                   Silicon West, Sason, Sambalpur, Odisha, Pin: 768200
@@ -119,7 +122,7 @@ export default function RootLayout({
                 <p className="font-[600] text-[1.5rem] underline md:mt-2 xl:mt-0">
                   CONTACT
                 </p>
-                <p className="mt-2 text-[1.25rem]">
+                <p className="mt-2 text-[1.125rem]">
                   Somdev Behera (Secretary, Literary Club) : +917978699617{" "}
                   <br />
                   {/* Satyabrat Panigrahi (Secretary General) : +917853998437 <br /> */}
