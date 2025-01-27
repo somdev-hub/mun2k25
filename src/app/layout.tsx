@@ -59,7 +59,7 @@ export default function RootLayout({
           antialiased`}
       >
         <nav className="fixed top-0 w-full z-[100] shadow">
-          <div className="flex justify-between items-center py-2 px-12 bg-blue">
+          <div className="flex justify-between items-center py-2 px-4 md:px-12 bg-blue">
             <div className="">
               <Link href={"/"}>
                 <h3>
@@ -74,7 +74,7 @@ export default function RootLayout({
                 </h3>
               </Link>
             </div>
-            <div className="">
+            <div className="hidden md:block">
               <button className="bg-white text-black px-6 font-lilita-one text-[1.125rem] py-2 rounded-md hover:bg-pink hover:text-white transition-all duration-300">
                 Register now
               </button>
@@ -83,20 +83,20 @@ export default function RootLayout({
         </nav>
         {children}
         <footer className="">
-          <div className="bg-blue px-8 xl:px-[5.5rem] py-12  flex flex-col sm:flex-row items-center justify-between text-white gap-16">
+          <div className="bg-blue px-8 xl:px-[5.5rem] py-12  flex flex-col sm:flex-row items-center justify-between text-white gap-8 md:gap-16">
             <div className=" flex flex-col sm:flex-row items-center justify-center">
-              <div className="flex gap-12 items-center md:flex-col lg:flex-row justify-around">
-                <div className="h-[6rem] w-[6rem] lg:h-[9rem] lg:w-[10rem] flex items-center justify-center relative">
+              <div className="flex gap-4 md:gap-8 items-center md:flex-col lg:flex-row justify-around">
+                <div className="h-[7rem] w-[7rem] lg:h-[10rem] lg:w-[11rem] flex items-center justify-center relative">
                   <Image
                     loading="lazy"
                     src={"/assets/literary-logo-white.svg"}
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "contain" }}
                     fill
                     alt="literary-logo-white"
                   />
                 </div>
 
-                <div className="lg:w-[12rem] lg:h-[5rem] w-[11rem] h-[4rem] flex items-center justify-center md:mt-4 lg:mt-0 relative">
+                <div className="lg:w-[12rem] lg:h-[5rem] w-[12rem] h-[5rem] flex items-center justify-center md:mt-4 lg:mt-0 relative">
                   <Image
                     src="/assets/silicon-logo.png"
                     className="w-full h-full"
@@ -104,7 +104,7 @@ export default function RootLayout({
                     // layout="fill"
                     fill
                     // objectFit="cover"
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
               </div>

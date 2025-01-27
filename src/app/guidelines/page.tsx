@@ -5,11 +5,14 @@ import { guidelines } from "@/utils/guidelines";
 import Image from "next/image";
 import { FaArrowUp } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Guidelines = () => {
   const [selectedGuideline, setSelectedGuideline] = useState("Introduction");
   const [visibleGuideline, setVisibleGuideline] = useState(["Introduction"]);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,9 +34,23 @@ const Guidelines = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="bg-[#eeeeee] mt-12 pr-12 flex min-h-screen">
-      <div className=" px-12 pt-12 min-w-[20%]  bg-white border-solid border-r-[1px] border-[#e0e0e0]">
-        <h2 className="text-[2rem]">Contents</h2>
+    <div className="bg-[#eeeeee] mt-12 md:pr-12 flex min-h-screen">
+      <div
+        className={`fixed h-full md:h-auto md:static ${
+          showSidebar ? "left-0" : "left-[-100dvw]"
+        } px-4 md:px-12 pt-12 min-w-[20%]  bg-white border-solid border-r-[1px] border-[#e0e0e0] transition-all duration-300 ease-in-out`}
+      >
+        <div className="md:hidden flex gap-4 items-center mb-4">
+          <FaArrowLeftLong
+            className="text-[1.5rem] flex"
+            onClick={() => {
+              setShowSidebar(false);
+            }}
+          />
+
+          <h2 className="text-[2rem]">Contents</h2>
+        </div>
+        <h2 className="text-[2rem] hidden md:block">Contents</h2>
 
         <ul className="list-none font-lilita-one list-inside mt-4 flex flex-col gap-4">
           {Object.keys(guidelines).map((key) => (
@@ -47,6 +64,7 @@ const Guidelines = () => {
                   onClick={() => {
                     setSelectedGuideline(key);
                     setVisibleGuideline([key]);
+                    setShowSidebar(false);
                   }}
                 >
                   {key}
@@ -81,7 +99,30 @@ const Guidelines = () => {
           ))}
         </ul>
       </div>
-      <div className="ml-6 mt-12 pb-12">
+
+      <div
+        className={`md:ml-6 mt-12 pb-12 px-4 md:px-0 ${
+          showSidebar ? "overflow-hidden  " : ""
+        }`}
+        onClick={() => {
+          if (showSidebar) {
+            setShowSidebar(false);
+          }
+        }}
+      >
+        <div className="border-solid  py-2 border-blue flex items-center md:hidden mb-4">
+          <div className="">
+            <GiHamburgerMenu
+              className="text-[1.5rem]"
+              onClick={() => {
+                setShowSidebar(!showSidebar);
+              }}
+            />
+          </div>
+          <div className="flex-1">
+            <p className="text-center text-[1.5rem]">Guidelines</p>
+          </div>
+        </div>
         <h2 className="text-[2rem]">{selectedGuideline}</h2>
         {guidelines[selectedGuideline].map((item, key) => (
           <div key={key} className="mt-4">
