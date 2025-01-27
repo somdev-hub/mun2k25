@@ -231,14 +231,14 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="mt-[6rem] md:mt-[8rem] px-4 md:px-12 flex flex-col lg:flex-row justify-between items-center">
+      <div className="mt-[6rem] md:mt-[8rem] px-4 md:px-12 flex flex-col xl:flex-row justify-between items-center">
         <div className="md:flex-1">
           <h2 className="font-lilita-one text-[2rem] md:text-[2.5rem] sub-shadow-head mb-2">
             Silicon Literary Club presents
           </h2>
           <h1>
             <span className="text-[5.5rem] md:text-[7.5rem] shadow-head font-lalezar">
-              Model United Nations
+              Model United Nations{" "}
             </span>{" "}
             <span className="text-[4.5rem] md:text-[6rem] shadow-head-sec font-lemon">
               2K25
@@ -367,7 +367,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-16 md:mt-[6rem] px-4 lg:px-[8rem] py-6">
+      <div className="mt-16 md:mt-[6rem] px-4 lg:px-[4rem] xl:px-[8rem] py-6">
         <h1 className="text-center text-[2.25rem] md:text-[2.5rem]">
           AGENDA FOR DISCUSSION AND DELIBERATION
         </h1>
@@ -391,11 +391,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-8 bg-[#eeeeee] px-4 lg:px-[8rem] py-[4rem]">
+      <div className="mt-8 bg-[#eeeeee] px-4 lg:px-[4rem] xl:px-[8rem] py-[4rem]">
         <div className="">
           <h1 className="text-center text-[2.5rem]">JUDGES</h1>
           <div className="mt-4">
-            <div className="grid lg:grid-rows-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-rows-3 md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 gap-8">
               {judges.map((person, index) => (
                 <div
                   key={index}
@@ -457,7 +457,7 @@ export default function Home() {
         <div className="mt-[4rem]">
           <h1 className="text-center text-[2.5rem]">ORGANIZERS</h1>
           <div className="mt-4">
-            <div className="flex flex-col gap-4 md:grid grid-rows-2 grid-cols-3 md:gap-8">
+            <div className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 md:gap-8">
               {organizers.map((person, index) => (
                 <div
                   key={index}
@@ -487,21 +487,28 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="my-16 px-4 lg:px-[8rem]">
+      <div className="my-16 px-4 lg:px-[4rem] xl:px-[8rem]">
         <div className="rounded-2xl bg-pink px-[2rem] py-[2rem] flex flex-col md:flex-row justify-between ">
-          <div className="flex-1 flex items-center justify-center border-solid border-b-2 md:border-r-2 md:mr-12 mb-12 pb-6 md:pb-0 border-white">
+          <div className="flex-1 flex items-center justify-center border-solid border-b-2 md:border-b-0 md:border-r-2 md:mr-12 mb-12 md:mb-0 pb-6 md:pb-0 border-white">
             <Image
               src={"/assets/mun-logo.svg"}
               height="350"
               width="350"
               alt="MUN Logo"
-              className="mun-shadow"
+              className="mun-shadow block md:hidden lg:block"
+            />
+            <Image
+              src={"/assets/mun-logo.svg"}
+              height="300"
+              width="300"
+              alt="MUN Logo"
+              className="mun-shadow hidden md:block lg:hidden"
             />
           </div>
           {/* <div className="border-solid border-l-2 h-full w-1 border-white"></div> */}
           <div className="flex-1 flex flex-col gap-8 md:gap-0 justify-evenly">
             <div className="text-white ">
-              <h2 className="text-[2.25rem] md:text-[2.5rem]">
+              <h2 className="text-[2.25rem] lg:text-[2.5rem]">
                 Rules and guidelines of MUN
               </h2>
               <Link href="/guidelines">
@@ -512,7 +519,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="text-white ">
-              <h2 className="text-[2.25rem] md:text-[2.5rem]">
+              <h2 className="text-[2.25rem] lg:text-[2.5rem]">
                 Download position paper template
               </h2>
               <div className="flex gap-4 items-center text-[1.5rem]">

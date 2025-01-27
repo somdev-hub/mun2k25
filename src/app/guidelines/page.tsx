@@ -34,13 +34,13 @@ const Guidelines = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="bg-[#eeeeee] mt-12 md:pr-12 flex min-h-screen">
+    <div className="bg-[#eeeeee] mt-12 lg:pr-12 md:pr-4 flex min-h-screen">
       <div
-        className={`fixed h-full md:h-auto md:static ${
+        className={`fixed h-full xl:h-auto xl:static ${
           showSidebar ? "left-0" : "left-[-100dvw]"
-        } px-4 md:px-12 pt-12 min-w-[20%]  bg-white border-solid border-r-[1px] border-[#e0e0e0] transition-all duration-300 ease-in-out`}
+        } px-4 lg:px-12 pt-12 min-w-[20%]  bg-white border-solid border-r-[1px] border-[#e0e0e0] transition-all duration-300 ease-in-out`}
       >
-        <div className="md:hidden flex gap-4 items-center mb-4">
+        <div className="xl:hidden flex gap-4 items-center mb-4">
           <FaArrowLeftLong
             className="text-[1.5rem] flex"
             onClick={() => {
@@ -50,7 +50,7 @@ const Guidelines = () => {
 
           <h2 className="text-[2rem]">Contents</h2>
         </div>
-        <h2 className="text-[2rem] hidden md:block">Contents</h2>
+        <h2 className="text-[2rem] hidden lg:block">Contents</h2>
 
         <ul className="list-none font-lilita-one list-inside mt-4 flex flex-col gap-4">
           {Object.keys(guidelines).map((key) => (
@@ -101,7 +101,7 @@ const Guidelines = () => {
       </div>
 
       <div
-        className={`md:ml-6 mt-12 pb-12 px-4 md:px-0 ${
+        className={`ml-12 xl:ml-6 mt-12 pb-12 px-4 lg:px-0 ${
           showSidebar ? "overflow-hidden  " : ""
         }`}
         onClick={() => {
@@ -110,7 +110,7 @@ const Guidelines = () => {
           }
         }}
       >
-        <div className="border-solid  py-2 border-blue flex items-center md:hidden mb-4">
+        <div className="border-solid  py-2 border-blue flex items-center xl:hidden mb-4">
           <div className="">
             <GiHamburgerMenu
               className="text-[1.5rem]"

@@ -62,8 +62,8 @@ const FormPage = () => {
   }
 
   return (
-    <div className="bg-[#eeeeee] pb-12 md:pb-16 pt-[6rem] md:pt-[8rem] px-4 lg:px-[8rem] flex justify-center items-center ">
-      <div className="bg-white shadow-md w-full lg:w-[50%] h-[90%] px-6 md:px-8 py-6 md:py-8 ">
+    <div className="bg-[#eeeeee] pb-12 md:pb-16 pt-[6rem] md:pt-[8rem] px-4 lg:px-[8rem] flex justify-center items-center min-h-[80dvh]">
+      <div className="bg-white shadow-md w-full xl:w-[50%] h-[90%] px-6 md:px-8 py-6 md:py-8 ">
         <div className="mb-6">
           <h1 className="text-4xl font-bold font-lalezar">Register Now</h1>
           <p className=" text-gray-500 font-lalezar">
@@ -129,7 +129,7 @@ const FormPage = () => {
                         onValueChange={field.onChange}
                         defaultValue={field.value}
                       >
-                        <SelectTrigger className="w-full text-lg">
+                        <SelectTrigger className="w-full text-md">
                           <SelectValue placeholder="Select Year" />
                         </SelectTrigger>
                         <SelectContent className="font-lalezar">
@@ -156,7 +156,7 @@ const FormPage = () => {
                         onValueChange={field.onChange}
                         defaultValue={field.value}
                       >
-                        <SelectTrigger className="w-full text-lg">
+                        <SelectTrigger className="w-full text-md">
                           <SelectValue placeholder="Select Branch" />
                         </SelectTrigger>
                         <SelectContent className="font-lalezar">

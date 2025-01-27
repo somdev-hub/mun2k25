@@ -59,7 +59,7 @@ export default function RootLayout({
           antialiased`}
       >
         <nav className="fixed top-0 w-full z-[100] shadow">
-          <div className="flex justify-between items-center py-2 px-4 md:px-12 bg-blue">
+          <div className="flex justify-between items-center py-2 px-4 lg:px-12 bg-blue">
             <div className="">
               <Link href={"/"}>
                 <h3>
