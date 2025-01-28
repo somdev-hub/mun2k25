@@ -5,7 +5,7 @@ import { guidelines } from "@/utils/guidelines";
 import Image from "next/image";
 import { FaArrowUp } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { BiMenuAltLeft } from "react-icons/bi";
 import { FaArrowLeftLong } from "react-icons/fa6";
 
 const Guidelines = () => {
@@ -34,7 +34,7 @@ const Guidelines = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="bg-[#eeeeee] mt-12 lg:pr-12 md:pr-4 flex min-h-screen">
+    <div className="bg-[#eeeeee] mt-12 lg:pr-12 flex min-h-screen">
       <div
         className={`fixed h-full xl:h-auto xl:static ${
           showSidebar ? "left-0" : "left-[-100dvw]"
@@ -101,7 +101,7 @@ const Guidelines = () => {
       </div>
 
       <div
-        className={`ml-12 xl:ml-6 mt-12 pb-12 px-4 lg:px-0 ${
+        className={`lg:ml-12 xl:ml-6 mt-12 pb-12 px-4 lg:px-0 ${
           showSidebar ? "overflow-hidden  " : ""
         }`}
         onClick={() => {
@@ -112,8 +112,8 @@ const Guidelines = () => {
       >
         <div className="border-solid  py-2 border-blue flex items-center xl:hidden mb-4">
           <div className="">
-            <GiHamburgerMenu
-              className="text-[1.5rem]"
+            <BiMenuAltLeft
+              className="text-[2rem]"
               onClick={() => {
                 setShowSidebar(!showSidebar);
               }}

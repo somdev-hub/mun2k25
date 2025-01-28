@@ -9,6 +9,8 @@ import {
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Nav from "@/components/nav/Nav";
 
 const daysOne = Days_One({
   variable: "--font-days-one",
@@ -58,7 +60,7 @@ export default function RootLayout({
         ${montserrat.variable} 
           antialiased`}
       >
-        <nav className="fixed top-0 w-full z-[100] shadow">
+        {/* <nav className="fixed top-0 w-full z-[100] shadow">
           <div className="flex justify-between items-center py-2 px-4 lg:px-12 bg-blue">
             <div className="">
               <Link href={"/"}>
@@ -66,21 +68,46 @@ export default function RootLayout({
                   <span
                     className={`font-lalezar text-white  sm-text-shadow text-[2.5rem]`}
                   >
-                    MUN
-                  </span>{" "}
+                    MUN{" "}
+                  </span>
                   <span className="font-lemon text-white sm-text-shadow-violet text-[2rem] ">
                     2K25
                   </span>
                 </h3>
               </Link>
             </div>
-            <div className="hidden md:block">
-              <button className="bg-white text-black px-6 font-lilita-one text-[1.125rem] py-2 rounded-md hover:bg-pink hover:text-white transition-all duration-300">
-                Register now
-              </button>
+            <div className="hidden md:flex gap-12 items-center">
+              <ul className="flex gap-4 text-white font-lilita-one text-[1.125rem] items-center">
+                <li className="hover:text-pink transition-all duration-300">
+                  <Link href="/glimpses">Glimpses</Link>
+                </li>
+              </ul>
+              <Link href="/form">
+                <button className="bg-white text-black px-6 font-lilita-one text-[1.125rem] py-2 rounded-md hover:bg-pink hover:text-white transition-all duration-300">
+                  Register now
+                </button>
+              </Link>
+            </div>
+            <div className="">
+              <GiHamburgerMenu className="text-white sm:hidden text-[1.75rem]" />
             </div>
           </div>
-        </nav>
+          <div className="">
+            <div className="bg-white py-4 flex flex-col justify-center items-center gap-4">
+              <ul className="flex gap-4 text-black font-lilita-one text-[1.125rem] items-center">
+                <li className="hover:text-pink transition-all duration-300">
+                  <Link href="/glimpses">Glimpses</Link>
+                </li>
+              </ul>
+              <Link href="/form">
+                <button className="bg-blue text-white px-6 font-lilita-one text-[1.125rem] py-2 rounded-md hover:bg-pink hover:text-white transition-all duration-300">
+                  Register now
+                </button>
+              </Link>
+            </div>
+          </div>
+        </nav> */}
+        <Nav />
         {children}
         <footer className="">
           <div className="bg-blue px-8 xl:px-[5.5rem] py-12  flex flex-col sm:flex-row items-center justify-between text-white gap-8 md:gap-16">

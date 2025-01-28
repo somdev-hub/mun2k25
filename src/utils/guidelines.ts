@@ -47,7 +47,13 @@ export const guidelines: {
       content:
         "The model united nations 2025 is organized by Silicon Literary Club, a student-led organization that aims to promote literacy and education among students. The organizing committee is responsible for planning and running the conference, including selecting topics, assigning countries, and organizing debates and other activities.",
       images: []
-    }
+    },
+    {
+      title: "Jury",
+      content:
+        "The model united nations 2025 is organized by Silicon Literary Club, a student-led organization that aims to promote literacy and education among students. The organizing committee is responsible for planning and running the conference, including selecting topics, assigning countries, and organizing debates and other activities.",
+      images: []
+    },
   ],
   Participation: [
     {
@@ -57,7 +63,7 @@ export const guidelines: {
       images: []
     },
     {
-      title: "How can participate?",
+      title: "Who can participate?",
       content:
         "The official language of the conference is English. All delegates must be proficient in English to participate in the conference.",
       images: []
@@ -98,6 +104,12 @@ export const guidelines: {
       title: "How to prepare?",
       content:
         "Registration for the conference will open in September 2025 and will close in November 2025. The registration fee is $50 per delegate. Delegates must register online through the conference website.",
+      images: []
+    },
+    {
+      title: "Conducting the research",
+      content:
+        "Payment for registration must be made online through the conference website. Delegates can pay using a credit card or PayPal account.",
       images: []
     },
     {
