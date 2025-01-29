@@ -1,20 +1,39 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { glimpses } from "@/utils/glimpses-data";
 import { IoIosArrowDown } from "react-icons/io";
+import { useSidebar } from "@/components/context/SidebarContext";
+import Scroller from "@/components/scroller/Scroller";
 
 const Glimpses = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
+  const { showSidebar, setShowSidebar } = useSidebar();
+
+  // const [showSidebar, setShowSidebar] = useState(false);
   const [selectedGlimpse, setSelectedGlimpse] = useState("MUN 2024");
   const [visibleGlimpses, setVisibleGlimpses] = useState(["MUN 2024"]);
+
+  const subtopicRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const [selectedSubtopic, setSelectedSubtopic] = useState(
+    "John Doe (France) awarded Best Delegate"
+  );
+
+  useEffect(() => {
+    if (subtopicRefs.current[selectedSubtopic]) {
+      const offset = 100;
+      const element = subtopicRefs.current[selectedSubtopic];
+      const top =
+        element?.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  }, [selectedSubtopic]);
   return (
     <div className="bg-[#eeeeee] mt-12 lg:pr-12 flex min-h-screen">
       <div
-        className={`fixed h-full xl:h-auto xl:static ${
+        className={`fixed h-full overflow-y-scroll sm:overflow-auto xl:h-auto xl:static ${
           showSidebar ? "left-0" : "left-[-100dvw]"
         } px-4 lg:px-12 pt-12 min-w-[20%] max-w-[80%]  bg-white border-solid border-r-[1px] border-[#e0e0e0] transition-all duration-300 ease-in-out z-[15]`}
       >
@@ -69,7 +88,18 @@ const Glimpses = () => {
               >
                 <ul className="list-none ml-3 mt-3 flex flex-col gap-3">
                   {glimpse.content.map((item, key) => (
-                    <li key={key} className="text-[1rem] font-lalezar">
+                    <li
+                      key={key}
+                      className="text-[1rem] font-lalezar cursor-pointer hover:text-violet"
+                      onClick={() => {
+                        setSelectedSubtopic(item.heading);
+                        // setVisibleGuideline([key]);
+                        setSelectedGlimpse(glimpse.edition);
+                        if (showSidebar) {
+                          setShowSidebar(false);
+                        }
+                      }}
+                    >
                       {item.heading}
                     </li>
                   ))}
@@ -103,12 +133,23 @@ const Glimpses = () => {
             <p className="text-center text-[1.5rem]">Glimpses</p>
           </div>
         </div>
-        <h2 className="text-[2rem]">Model United Nations 2024 glimpses</h2>
+        <h2 className="text-[2rem]">
+          {
+            glimpses.find((glimpse) => glimpse.edition === selectedGlimpse)
+              ?.title
+          }
+        </h2>
 
         {glimpses.map((glimpse) => {
           if (glimpse.edition === selectedGlimpse) {
             return glimpse.content.map((item, key) => (
-              <div className="mt-8" key={key}>
+              <div
+                className="mt-8"
+                key={key}
+                ref={(el) => {
+                  subtopicRefs.current[item.heading] = el;
+                }}
+              >
                 <h3
                   className={`text-[1.5rem] font-lilita-one text-violet ${
                     key % 2 == 0 ? "text-right" : "text-left"
@@ -165,6 +206,8 @@ const Glimpses = () => {
           }
         })}
       </div>
+
+      <Scroller />
     </div>
   );
 };

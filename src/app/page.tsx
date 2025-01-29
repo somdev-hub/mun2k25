@@ -1,9 +1,9 @@
 "use client";
 
 import { Timeline } from "@/components/ui/timeline";
-import { JSX, useEffect, useState } from "react";
+import { JSX } from "react";
 import Image from "next/image";
-import { FaArrowUp, FaCalendar, FaClock } from "react-icons/fa";
+import { FaCalendar, FaClock } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
 import {
   Accordion,
@@ -15,30 +15,9 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { timeline } from "@/utils/timeline";
 import Link from "next/link";
 import { agenda } from "@/utils/agenda";
+import Scroller from "@/components/scroller/Scroller";
 
 export default function Home() {
-  const [showScrollToTop, setShowScrollToTop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollToTop(true);
-      } else {
-        setShowScrollToTop(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   const timeline_data: {
     title: string;
     content: JSX.Element;
@@ -505,7 +484,6 @@ export default function Home() {
               className="mun-shadow hidden md:block lg:hidden"
             />
           </div>
-          {/* <div className="border-solid border-l-2 h-full w-1 border-white"></div> */}
           <div className="flex-1 flex flex-col gap-8 md:gap-0 justify-evenly">
             <div className="text-white ">
               <h2 className="text-[2.25rem] lg:text-[2.5rem]">
@@ -530,14 +508,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {showScrollToTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-purple text-white p-3 rounded-full shadow-lg hover:bg-pink transition-colors duration-300"
-        >
-          <FaArrowUp />
-        </button>
-      )}
+
+      <Scroller />
     </div>
   );
 }
