@@ -55,6 +55,32 @@
   line-height: 1;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+.marquee-content span {
+  display: inline-block;
+  padding-right: 2rem; /* Adjust the gap between the spans */
+}
+
 p,
 h1,
 h2,

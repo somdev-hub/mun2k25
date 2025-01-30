@@ -16,6 +16,8 @@ import { timeline } from "@/utils/timeline";
 import Link from "next/link";
 import { agenda } from "@/utils/agenda";
 import Scroller from "@/components/scroller/Scroller";
+import { judges, officials, organizers } from "@/utils/organizers";
+import { countries } from "@/utils/countries";
 
 export default function Home() {
   const timeline_data: {
@@ -46,167 +48,6 @@ export default function Home() {
       )
     };
   });
-
-  const judges: {
-    name: string;
-    image: string;
-    position: string;
-  }[] = [
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    }
-  ];
-
-  const houseOfficials: {
-    name: string;
-    image: string;
-    position: string;
-  }[] = [
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    }
-  ];
-
-  const organizers: {
-    name: string;
-    image: string;
-    position: string;
-  }[] = [
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    },
-    {
-      name: "John Doe",
-      image:
-        "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-      position: "Chief Guest"
-    }
-  ];
-
-  const countries = [
-    "AF",
-    "PK",
-    "IN",
-    "CN",
-    "BD",
-    "MV",
-    "RU",
-    "JP",
-    "KR",
-    "US",
-    "GB",
-    "FR",
-    "DE",
-    "CA",
-    "AU",
-    "BR",
-    "IL",
-    "EG",
-    "UA",
-    "SA",
-    "IR",
-    "IT",
-    "TR"
-  ];
 
   return (
     <div className="">
@@ -389,13 +230,20 @@ export default function Home() {
                       className="rounded-l-2xl h-full w-[20%]"
                     />
                   </div>
-                  <div className="py-2 ml-4">
+                  <div className="w-[80%] py-2 px-4 overflow-hidden">
                     <h2 className="text-[1.5rem] font-lilita-one">
                       {person.name}
                     </h2>
-                    <p className="text-[1.25rem] font-montserrat font-[600]">
-                      {person.position}
-                    </p>
+                    <div className="marquee">
+                      <div className="marquee-content">
+                        <span className=" font-montserrat font-[600]">
+                          {person.position}
+                        </span>
+                        <span className=" font-montserrat font-[600]">
+                          {person.position}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -406,7 +254,7 @@ export default function Home() {
           <h1 className="text-center text-[2.5rem]">HOUSE OFFICIALS</h1>
           <div className="mt-4">
             <div className="flex flex-col md:flex-row w-full gap-8 justify-center">
-              {houseOfficials.map((person, index) => (
+              {officials.map((person, index) => (
                 <div
                   key={index}
                   className="flex bg-white shadow-md rounded-2xl items-center w-full md:w-[25rem]"
@@ -424,7 +272,7 @@ export default function Home() {
                     <h2 className="text-[1.5rem] font-lilita-one">
                       {person.name}
                     </h2>
-                    <p className="text-[1.25rem] font-montserrat font-[600]">
+                    <p className="] font-montserrat font-[600]">
                       {person.position}
                     </p>
                   </div>
@@ -455,7 +303,7 @@ export default function Home() {
                     <h2 className="text-[1.5rem] font-lilita-one">
                       {person.name}
                     </h2>
-                    <p className="text-[1.25rem] font-montserrat font-[600]">
+                    <p className=" font-montserrat font-[600]">
                       {person.position}
                     </p>
                   </div>
