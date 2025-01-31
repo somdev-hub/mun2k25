@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -20,6 +20,13 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle
+} from "@/components/ui/dialog";
 
 const FormPage = () => {
   const formSchema = z.object({
@@ -28,7 +35,7 @@ const FormPage = () => {
       .min(2, "Name must be at least 2 characters")
       .max(255, "Name must be less than 255 characters"),
     email: z.string().email("Invalid email address"),
-    SIC: z.string().length(8, "SIC must be exactly 8 characters"),
+    sic: z.string().length(8, "SIC must be exactly 8 characters"),
     year: z
       .enum(["1st", "2nd", "3rd", "4th"])
       .refine((val) => ["1st", "2nd", "3rd", "4th"].includes(val), {
@@ -47,18 +54,49 @@ const FormPage = () => {
     defaultValues: {
       name: "",
       email: "",
-      SIC: "",
+      sic: "",
       year: undefined,
       branch: undefined,
       phone: ""
     }
   });
 
+  const [registrationStatus, setRegistrationStatus] = useState({
+    status: false,
+    message: "",
+    showDialog: false
+  });
+
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    try {
+      const res = await fetch("http://localhost:3000/api/create-participant", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(values)
+      });
+
+      if (res.ok) {
+        // alert("Registration successful");
+        setRegistrationStatus({
+          status: true,
+          message: (await res.json()).message,
+          showDialog: true
+        });
+      } else {
+        // alert("Registration failed");
+        setRegistrationStatus({
+          status: false,
+          message: (await res.json()).message,
+          showDialog: true
+        });
+      }
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
@@ -106,7 +144,7 @@ const FormPage = () => {
 
               <FormField
                 control={form.control}
-                name="SIC"
+                name="sic"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel className="text-lg">SIC</FormLabel>
@@ -190,13 +228,36 @@ const FormPage = () => {
               {/* <Button type="submit">Submit</Button> */}
               <button
                 type="submit"
-                className="bg-pink rounded-md w-full mt-6 text-white font-lilita-one py-2 shadow-md hover:bg-violet transition-all duration-300"
+                className="bg-pink rounded-md w-full mt-8 text-white font-lilita-one py-2 shadow-md hover:bg-violet transition-all duration-300"
               >
                 Submit
               </button>
             </form>
           </Form>
         </div>
+      </div>
+
+      <div className="">
+        <Dialog
+          open={registrationStatus.showDialog}
+          onOpenChange={() => {
+            setRegistrationStatus({
+              ...registrationStatus,
+              showDialog: false
+            });
+          }}
+        >
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle className="font-lilita-one m-0 font-[500] text-[1.25rem]">
+                {registrationStatus.status
+                  ? "Registration Successful"
+                  : "Registration Failed"}
+              </DialogTitle>
+            </DialogHeader>
+            <DialogDescription>{registrationStatus.message}</DialogDescription>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );

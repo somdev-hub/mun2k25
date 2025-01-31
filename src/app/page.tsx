@@ -337,8 +337,8 @@ export default function Home() {
               <h2 className="text-[2.25rem] lg:text-[2.5rem]">
                 Rules and guidelines of MUN
               </h2>
-              <Link href="/guidelines">
-                <div className="flex gap-4 items-center text-[1.5rem] group">
+              <Link href="/guidelines" className="w-fit block">
+                <div className="flex gap-4 items-center text-[1.5rem] group w-fit">
                   <p>Read here</p>
                   <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-2" />
                 </div>
@@ -348,7 +348,7 @@ export default function Home() {
               <h2 className="text-[2.25rem] lg:text-[2.5rem]">
                 Download position paper template
               </h2>
-              <div className="flex gap-4 items-center text-[1.5rem]">
+              <div className="flex gap-4 items-center text-[1.5rem] w-fit">
                 <p>Download here</p>
                 <FaArrowRightLong />
               </div>

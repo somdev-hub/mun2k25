@@ -8,7 +8,7 @@ const Nav = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full z-[100] shadow">
+    <nav className="fixed top-0 w-full z-[50] shadow">
       <div className="flex justify-between items-center py-2 px-4 lg:px-12 bg-blue">
         <div className="">
           <Link href={"/"}>
