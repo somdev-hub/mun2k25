@@ -260,12 +260,12 @@ export default function Home() {
         <div className="">
           <h1 className="text-center text-[2.5rem]">JUDGES</h1>
           <div className="mt-4">
-            <div className="flex flex-col gap-4 sm:grid md:grid-rows-3 md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 sm:gap-8">
+            <div className="flex flex-col gap-4 sm:grid md:grid-rows-3 md:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 sm:gap-8">
               {judges.map((person, index) => (
                 <div
                   data-aos="flip-up"
                   key={index}
-                  className="flex bg-white shadow-md rounded-2xl items-center h-[5rem] md:h-auto"
+                  className="flex bg-white shadow-md rounded-2xl items-center h-[5rem]"
                 >
                   <div className="w-[20%] h-full rounded-l-2xl relative">
                     <Image
@@ -304,7 +304,7 @@ export default function Home() {
                 <div
                   data-aos="flip-up"
                   key={index}
-                  className="flex bg-white shadow-md rounded-2xl items-center w-full md:w-[25rem] h-[5rem] md:h-auto"
+                  className="flex bg-white shadow-md rounded-2xl items-center w-full md:w-[25rem] h-[5rem] "
                 >
                   <div className="w-[20%] h-full rounded-l-2xl relative">
                     <Image
@@ -331,7 +331,7 @@ export default function Home() {
         <div className="mt-[4rem]">
           <h1 className="text-center text-[2.5rem]">ORGANIZERS</h1>
           <div className="mt-4">
-            <div className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 md:gap-8">
+            <div className="flex flex-col gap-4 md:grid md:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 md:gap-8">
               {organizers.map((person, index) => (
                 <div
                   data-aos="flip-up"
@@ -396,10 +396,12 @@ export default function Home() {
               <h2 className="text-[2.25rem] lg:text-[2.5rem]">
                 Download position paper template
               </h2>
-              <div className="flex gap-4 items-center text-[1.5rem] w-fit">
-                <p>Download here</p>
-                <FaArrowRightLong />
-              </div>
+              <a href="/assets/POSITION PAPERS.docx" download>
+                <div className="flex gap-4 items-center group text-[1.5rem] w-fit">
+                  <p>Download here</p>
+                  <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-2" />
+                </div>
+              </a>
             </div>
           </div>
         </div>

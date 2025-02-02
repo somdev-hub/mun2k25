@@ -2,39 +2,54 @@ export const agenda: {
   title: string;
   description: string;
 }[] = [
+  /**
+   * ⦁	Preparing for Future Pandemics: Strengthening Global Health Systems 
+⦁	Data Privacy and Digital Sovereignty in the Age of AI
+⦁	Space Governance and the Militarization of Outer Space 
+⦁	Managing the Economic Fallout of Geopolitical Conflicts 
+⦁	World Peace: ending today’s conflicts to build a peaceful tommorow
+⦁	Achieving Carbon Neutrality by a Global Cooperation Framework 
+⦁	Addressing the Global Refugee and Migration Crisis 
+⦁	Balancing Peaceful Use and Security in Nuclear Technology Development 
+   */
   {
-    title: "World peace: crafting a better world without conflicts",
+    title: "Preparing for Future Pandemics: Strengthening Global Health Systems ",
     description:
-      "A discussion on the importance of world peace and how we can achieve it. The session will also focus on the role of youth in promoting peace and harmony."
+      "The COVID-19 pandemic has exposed the vulnerabilities of global health systems. There is an urgent need to strengthen health systems to prepare for future pandemics. Countries must work together to build resilient health systems that can respond effectively to future health crises."
   },
   {
-    title: "Sustainable development: the key to a better future",
+    title: "Data Privacy and Digital Sovereignty in the Age of AI",
     description:
-      "A discussion on the importance of sustainable development and how we can achieve it. The session will also focus on the role of youth in promoting sustainable development."
+      "The rise of artificial intelligence (AI) has raised concerns about data privacy and digital sovereignty. There is a need to establish clear guidelines and regulations to protect data privacy and ensure digital sovereignty. "
   },
   {
-    title: "Climate change: the need for urgent action",
+    title: "Space Governance and the Militarization of Outer Space",
     description:
-      "A discussion on the importance of addressing climate change and the need for urgent action. The session will also focus on the role of youth in combating climate change."
+      "The militarization of outer space poses a threat to global security. There is a need to establish effective space governance mechanisms to prevent the weaponization of space. Countries must work together to ensure the peaceful use of outer space."
   },
   {
-    title: "Youth empowerment: unlocking the potential of the next generation",
+    title: "Managing the Economic Fallout of Geopolitical Conflicts ",
     description:
-      "A discussion on the importance of youth empowerment and how we can unlock the potential of the next generation. The session will also focus on the role of youth in shaping the future."
+      "Geopolitical conflicts can have a significant impact on the global economy. There is a need to manage the economic fallout of geopolitical conflicts to ensure economic stability and growth. The need is to work together to resolve conflicts peacefully and promote economic cooperation."
   },
   {
-    title: "Digital transformation: the future of technology and innovation",
+    title: "World Peace: ending today’s conflicts to build a peaceful tomorrow",
     description:
-      "A discussion on the importance of digital transformation and the future of technology and innovation. The session will also focus on the role of youth in driving digital transformation."
+      "Conflicts around the world continue to threaten global peace and security. There is an urgent need to end today's conflicts to build a peaceful tomorrow. Countries must work together to resolve conflicts peacefully and promote dialogue and cooperation."
   },
   {
-    title: "Social justice: building a fair and equitable society",
+    title: "Achieving Carbon Neutrality by a Global Cooperation Framework ",
     description:
-      "A discussion on the importance of social justice and building a fair and equitable society. The session will also focus on the role of youth in promoting social justice."
+      "Climate change is a global challenge that requires a coordinated global response. There is a need to achieve carbon neutrality by establishing a global cooperation framework. Countries must work together to reduce greenhouse gas emissions and transition to a sustainable low-carbon economy."
   },
   {
-    title: "Mental health: breaking the stigma and promoting well-being",
+    title: "Addressing the Global Refugee and Migration Crisis",
     description:
-      "A discussion on the importance of mental health and breaking the stigma around it. The session will also focus on the role of youth in promoting mental well-being."
-  }
+      "The global refugee and migration crisis is a humanitarian challenge that requires a coordinated international response. There is a need to address the root causes of forced displacement and provide protection and assistance to refugees and migrants. Countries must work together to find durable solutions to the global refugee and migration crisis."
+  },
+  {
+    title: "Balancing Peaceful Use and Security in Nuclear Technology Development",
+    description:
+      "Nuclear technology has the potential to provide significant benefits to society, but it also poses risks to global security. There is a need to balance the peaceful use and security of nuclear technology development. Countries must work together to prevent the proliferation of nuclear weapons and promote the peaceful use of nuclear technology."
+  },
 ];

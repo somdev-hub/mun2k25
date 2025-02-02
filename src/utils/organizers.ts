@@ -68,7 +68,7 @@ export const organizers: {
     position: "Secretary, Literary club"
   },
   {
-    name: "Mr. Saswat R. Pattnaik",
+    name: "Mr. Saswat Ranjan Pattnaik",
     image: "/assets/profile.svg",
     position: "Secretary Amenities"
   },
@@ -83,7 +83,7 @@ export const organizers: {
     position: "Coordinator, Literary club"
   },
   {
-    name: "Mr. Amlan A. Mishra",
+    name: "Mr. Amlan Abhijeet Mishra",
     image: "/assets/profile.svg",
     position: "Joint-Secretary, Literary club"
   },
