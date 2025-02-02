@@ -1,6 +1,6 @@
-import Participants from "../_utils/participant";
+import Participants from "../../server_utils/participant";
 import { NextApiRequest, NextApiResponse } from "next";
-import connectDB from "../_utils/connectDB";
+import connectDB from "../../server_utils/connectDB";
 
 interface Participant {
   name: string;
