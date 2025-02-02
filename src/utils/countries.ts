@@ -22,5 +22,7 @@ export const countries = [
   "IR",
   "IT",
   "TR",
-  "ZA"
+  "ZA",
+  "ID",
+  "MX"
 ];

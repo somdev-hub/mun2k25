@@ -67,7 +67,11 @@ const Glimpses = () => {
                   {glimpse.edition}
                 </span>
                 <IoIosArrowDown
-                  className="font-[600]"
+                  className={`font-[600] transition-transform duration-300 ${
+                    visibleGlimpses.includes(glimpse.edition)
+                      ? "rotate-180"
+                      : ""
+                  }`}
                   onClick={() => {
                     if (visibleGlimpses.includes(glimpse.edition)) {
                       setVisibleGlimpses((prev) =>
@@ -167,7 +171,7 @@ const Glimpses = () => {
                       src={item.images[0]}
                       alt="Best Delegate"
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "cover", borderRadius: "1rem" }}
                       // alt="Best Delegate"
                     />
                   </div>
@@ -179,27 +183,39 @@ const Glimpses = () => {
                 </div>
 
                 {item.description.length > 1 &&
-                  item.description.map((desc, key) => (
-                    <p className="mt-4 font-days-one text-justify" key={key}>
-                      {desc}
-                    </p>
-                  ))}
+                  item.description.map(
+                    (desc, key) =>
+                      key != 0 && (
+                        <p
+                          className="mt-4 font-days-one text-justify"
+                          key={key}
+                        >
+                          {desc}
+                        </p>
+                      )
+                  )}
                 <div className="mt-4 flex flex-wrap gap-4 items-center">
                   {item.images.length > 1 &&
-                    item.images.map((image, key) => (
-                      <div
-                        className="w-[10rem] h-[6rem] md:w-[14rem] md:h-[10rem] relative"
-                        key={key}
-                      >
-                        <Image
-                          src={image}
-                          alt="Best Delegate"
-                          fill
-                          style={{ objectFit: "cover" }}
-                          // alt="Best Delegate"
-                        />
-                      </div>
-                    ))}
+                    item.images.map(
+                      (image, key) =>
+                        key != 0 && (
+                          <div
+                            className="w-[10rem] h-[6rem] md:w-[14rem] md:h-[10rem] relative"
+                            key={key}
+                          >
+                            <Image
+                              src={image}
+                              alt="Best Delegate"
+                              fill
+                              style={{
+                                objectFit: "cover",
+                                borderRadius: "1rem"
+                              }}
+                              // alt="Best Delegate"
+                            />
+                          </div>
+                        )
+                    )}
                 </div>
               </div>
             ));

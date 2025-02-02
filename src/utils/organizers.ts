@@ -4,40 +4,34 @@ export const judges: {
   position: string;
 }[] = [
   {
-    name: "Dr. S. K. Singh",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Professor, Department of Political Science, University of Delhi"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   },
   {
-    name: "Dr. S. K. Singh",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Professor, Department of Political Science, University of Delhi"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   },
   {
-    name: "Dr. S. K. Singh",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Professor, Department of Political Science, University of Delhi"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   },
   {
-    name: "Dr. S. K. Singh",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Professor, Department of Political Science, University of Delhi"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   },
   {
-    name: "Dr. S. K. Singh",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Professor, Department of Political Science, University of Delhi"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   },
   {
-    name: "Dr. S. K. Singh",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Professor, Department of Political Science, University of Delhi"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   }
 ];
 
@@ -47,16 +41,14 @@ export const officials: {
   position: string;
 }[] = [
   {
-    name: "Mr. S.D. Behera",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary General, MUN 2025"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   },
   {
-    name: "Mr. S.D. Behera",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Hon. Chairperson, MUN 2025"
+    name: "TBA",
+    image: "/assets/profile.svg",
+    position: "To Be Announced"
   }
 ];
 
@@ -66,75 +58,43 @@ export const organizers: {
   position: string;
 }[] = [
   {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+    name: "Dr. Tyagraj Thakur",
+    image: "/assets/profile.svg",
+    position: "FIC, Literary club"
+  },
+  {
+    name: "Mr. Somdev Behera",
+    image: "/assets/profile.svg",
     position: "Secretary, Literary club"
   },
   {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
+    name: "Mr. Saswat R. Pattnaik",
+    image: "/assets/profile.svg",
+    position: "Secretary Amenities"
   },
   {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
+    name: "Mr. Ankit Roy",
+    image: "/assets/profile.svg",
+    position: "Secretary Academics"
   },
   {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
+    name: "Ms. Muskan Kumari",
+    image: "/assets/profile.svg",
+    position: "Coordinator, Literary club"
   },
   {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
+    name: "Mr. Amlan A. Mishra",
+    image: "/assets/profile.svg",
+    position: "Joint-Secretary, Literary club"
   },
   {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
+    name: "Mr. Rudra Prasad Das",
+    image: "/assets/profile.svg",
+    position: "Coordinator, Literary club"
   },
   {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
-  },
-  {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
-  },
-  {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
-  },
-  {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
-  },
-  {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
-  },
-  {
-    name: "Mr. John Doe",
-    image:
-      "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
-    position: "Secretary, Literary club"
+    name: "Ms. Alisha Patel",
+    image: "/assets/profile.svg",
+    position: "Coordinator, Literary club"
   }
 ];

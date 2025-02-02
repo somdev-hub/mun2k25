@@ -12,7 +12,7 @@ const Nav = () => {
       <div className="flex justify-between items-center py-2 px-4 lg:px-12 bg-blue">
         <div className="">
           <Link href={"/"}>
-            <h3>
+            <div>
               <span
                 className={`font-lalezar text-white  sm-text-shadow text-[2.5rem]`}
               >
@@ -21,7 +21,7 @@ const Nav = () => {
               <span className="font-lemon text-white sm-text-shadow-violet text-[2rem] ">
                 2K25
               </span>
-            </h3>
+            </div>
           </Link>
         </div>
         <div className="hidden md:flex gap-12 items-center">
@@ -36,7 +36,7 @@ const Nav = () => {
             </button>
           </Link>
         </div>
-        <div className="sm:hidden">
+        <div className="block sm:hidden">
           <GiHamburgerMenu
             className={`text-white sm:hidden text-[1.75rem] transition-transform duration-300 ${
               showDropdown ? "rotate-90" : "rotate-0"

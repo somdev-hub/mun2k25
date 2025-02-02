@@ -1,7 +1,7 @@
 "use client";
 
 import { Timeline } from "@/components/ui/timeline";
-import { JSX } from "react";
+import { JSX, useEffect, useState } from "react";
 import Image from "next/image";
 import { FaCalendar, FaClock } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
@@ -18,6 +18,8 @@ import { agenda } from "@/utils/agenda";
 import Scroller from "@/components/scroller/Scroller";
 import { judges, officials, organizers } from "@/utils/organizers";
 import { countries } from "@/utils/countries";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
   const timeline_data: {
@@ -49,31 +51,47 @@ export default function Home() {
     };
   });
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }, []);
+
   return (
     <div className="">
       <div className="mt-[6rem] md:mt-[8rem] px-4 md:px-12 flex flex-col xl:flex-row justify-between items-center">
         <div className="md:flex-1">
-          <h2 className="font-lilita-one text-[2rem] md:text-[2.5rem] sub-shadow-head mb-2">
+          <h2
+            className="font-lilita-one text-[2rem] md:text-[2.5rem] sub-shadow-head mb-2"
+            data-aos="fade-up"
+          >
             Silicon Literary Club presents
           </h2>
-          <h1>
+          <div data-aos="fade-up">
             <span className="text-[5.5rem] md:text-[7.5rem] shadow-head font-lalezar">
               Model United Nations{" "}
             </span>{" "}
             <span className="text-[4.5rem] md:text-[6rem] shadow-head-sec font-lemon">
               2K25
             </span>
-          </h1>
-          <h3 className="font-lilita-one text-[1.75rem] md:text-[2.5rem] mt-4 md:mt-0">
+          </div>
+          <h3
+            className="font-lilita-one text-[1.75rem] md:text-[2.5rem] mt-4 md:mt-0"
+            data-aos="fade-up"
+          >
             Shaping Tomorrow Through Diplomacy Today.
           </h3>
-          <Link href="/form">
+          <Link href="/form" data-aos="fade-up">
             <button className="font-lilita-one text-white bg-violet rounded-md px-8 mt-4 py-3 text-[1.25rem] hover:bg-white hover:text-black hover:shadow-xl transition-colors duration-300 flex items-center gap-2 group">
               Register Now
               <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-2" />
             </button>
           </Link>
-          <div className="flex flex-wrap gap-4 md:gap-8 font-lilita-one text-blue mt-6">
+          <div
+            className="flex flex-wrap gap-4 md:gap-8 font-lilita-one text-blue mt-6"
+            data-aos="fade-up"
+          >
             <div className="flex gap-4 items-center text-[1.5rem] md:text-[1.75rem]">
               <FaCalendar />
               <p>22nd Feb 2025</p>
@@ -88,7 +106,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="md:flex-1 flex items-center justify-center mt-4 md:mt-0">
+        <div
+          className="md:flex-1 flex items-center justify-center mt-4 md:mt-0"
+          data-aos="fade-up"
+        >
           <Image
             src={"/assets/hero.svg"}
             height="600"
@@ -98,7 +119,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-8 md:mt-12 px-4 md:px-12 py-8 bg-[#eeeeee] flex flex-col lg:flex-row items-center justify-between">
+      <div
+        data-aos="fade-up"
+        className="mt-8 md:mt-12 px-4 md:px-12 py-8 bg-[#eeeeee] flex flex-col lg:flex-row items-center justify-between"
+      >
         <div className="flex-1 flex items-center justify-center mb-8 md:mb-0">
           <Image
             src={"/assets/literary-logo.svg"}
@@ -124,7 +148,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[6rem] px-4">
+      <div data-aos="fade-up" className="mt-[6rem] px-4">
         <h1 className="text-center text-[2.25rem] md:text-[2.5rem]">
           TIMELINE
         </h1>
@@ -133,33 +157,46 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-[6rem] px-8 lg:px-[8rem] py-[4rem] bg-[#eeeeee]">
+      <div
+        data-aos="fade-up"
+        className="mt-[6rem] px-8 lg:px-[8rem] py-[4rem] bg-[#eeeeee]"
+      >
         <h1 className="text-center text-[2.25rem] md:text-[2.5rem]">
           COMMITTEES
         </h1>
         <div className="hidden md:flex mt-12 flex-wrap gap-[8rem] justify-center items-end">
           <Image
+            data-aos="zoom-in"
             src={"/assets/disec.svg"}
             height="150"
             width="150"
             alt="disec"
           />
           <Image
+            data-aos="zoom-in"
             src={"/assets/unhrc.svg"}
             height="150"
             width="150"
             alt="unhrc"
           />
-          <Image src={"/assets/unep.svg"} height="150" width="150" alt="unep" />
+          <Image
+            data-aos="zoom-in"
+            src={"/assets/unep.svg"}
+            height="150"
+            width="150"
+            alt="unep"
+          />
         </div>
         <div className="mt-12 flex md:hidden flex-wrap gap-[4rem] justify-center items-end">
           <Image
+            data-aos="zoom-in"
             src={"/assets/disec.svg"}
             height="100"
             width="100"
             alt="disec"
           />
           <Image
+            data-aos="zoom-in"
             src={"/assets/unhrc.svg"}
             height="100"
             width="100"
@@ -173,6 +210,7 @@ export default function Home() {
         <div className="mt-12 flex flex-wrap gap-6 md:gap-12 items-center justify-between">
           {countries.map((country, index) => (
             <div
+              data-aos="zoom-in"
               key={index}
               className="flex items-center justify-center md:h-[5rem] md:w-[8rem] h-[3rem] w-[5rem] relative"
             >
@@ -187,14 +225,21 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-16 md:mt-[6rem] px-4 lg:px-[4rem] xl:px-[8rem] py-6">
+      <div
+        data-aos="fade-up"
+        className="mt-16 md:mt-[6rem] px-4 lg:px-[4rem] xl:px-[8rem] py-6"
+      >
         <h1 className="text-center text-[2.25rem] md:text-[2.5rem]">
           AGENDA FOR DISCUSSION AND DELIBERATION
         </h1>
         <div className="mt-8 md:mt-[4rem]">
           <Accordion type="single" collapsible>
             {agenda.map((item, index) => (
-              <AccordionItem key={index} value={index.toString()}>
+              <AccordionItem
+                key={index}
+                value={index.toString()}
+                data-aos="fade-up"
+              >
                 <AccordionTrigger>
                   <h2 className="text-[1.25rem] md:text-[1.5rem] font-days-one">
                     {item.title}
@@ -215,11 +260,12 @@ export default function Home() {
         <div className="">
           <h1 className="text-center text-[2.5rem]">JUDGES</h1>
           <div className="mt-4">
-            <div className="grid md:grid-rows-3 md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-4 sm:grid md:grid-rows-3 md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 sm:gap-8">
               {judges.map((person, index) => (
                 <div
+                  data-aos="flip-up"
                   key={index}
-                  className="flex bg-white shadow-md rounded-2xl items-center"
+                  className="flex bg-white shadow-md rounded-2xl items-center h-[5rem] md:h-auto"
                 >
                   <div className="w-[20%] h-full rounded-l-2xl relative">
                     <Image
@@ -256,8 +302,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row w-full gap-8 justify-center">
               {officials.map((person, index) => (
                 <div
+                  data-aos="flip-up"
                   key={index}
-                  className="flex bg-white shadow-md rounded-2xl items-center w-full md:w-[25rem]"
+                  className="flex bg-white shadow-md rounded-2xl items-center w-full md:w-[25rem] h-[5rem] md:h-auto"
                 >
                   <div className="w-[20%] h-full rounded-l-2xl relative">
                     <Image
@@ -287,8 +334,9 @@ export default function Home() {
             <div className="flex flex-col gap-4 md:grid md:grid-cols-2 lg:grid-rows-2 lg:grid-cols-3 md:gap-8">
               {organizers.map((person, index) => (
                 <div
+                  data-aos="flip-up"
                   key={index}
-                  className="flex bg-white shadow-md rounded-2xl items-center"
+                  className="flex bg-white shadow-md rounded-2xl items-center h-[5rem] xl:h-auto"
                 >
                   <div className="w-[20%] h-full rounded-l-2xl relative">
                     <Image
@@ -299,8 +347,8 @@ export default function Home() {
                       className="rounded-l-2xl h-full w-[20%]"
                     />
                   </div>
-                  <div className="py-2 ml-4">
-                    <h2 className="text-[1.5rem] font-lilita-one">
+                  <div className="w-[80%] py-4 ml-4">
+                    <h2 className="text-[1.25rem] font-lilita-one">
                       {person.name}
                     </h2>
                     <p className=" font-montserrat font-[600]">
@@ -314,7 +362,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="my-16 px-4 lg:px-[4rem] xl:px-[8rem]">
+      <div data-aos="fade-up" className="my-16 px-4 lg:px-[4rem] xl:px-[8rem]">
         <div className="rounded-2xl bg-pink px-[2rem] py-[2rem] flex flex-col md:flex-row justify-between ">
           <div className="flex-1 flex items-center justify-center border-solid border-b-2 md:border-b-0 md:border-r-2 md:mr-12 mb-12 md:mb-0 pb-6 md:pb-0 border-white">
             <Image

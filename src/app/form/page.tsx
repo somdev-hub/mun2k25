@@ -96,6 +96,11 @@ const FormPage = () => {
       }
     } catch (error) {
       console.log(error);
+      setRegistrationStatus({
+        status: false,
+        message: "An error occurred",
+        showDialog: true
+      });
     }
   }
 
@@ -120,7 +125,7 @@ const FormPage = () => {
                     <FormControl>
                       <Input
                         className="text-lg"
-                        placeholder="shadcn"
+                        // placeholder="shadcn"
                         {...field}
                       />
                     </FormControl>
