@@ -71,7 +71,7 @@ const FormPage = () => {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
     try {
-      const res = await fetch("http://localhost:3000/api/create-participant", {
+      const res = await fetch("/api/create-participant", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
