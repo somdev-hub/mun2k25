@@ -65,7 +65,9 @@ const Guidelines = () => {
                   {key}
                 </span>
                 <IoIosArrowDown
-                  className="font-[600]"
+                  className={`font-[600] transition-transform duration-300 ${
+                    visibleGuideline.includes(key) ? "rotate-180" : ""
+                  }`}
                   onClick={() => {
                     if (visibleGuideline.includes(key)) {
                       setVisibleGuideline((prev) =>

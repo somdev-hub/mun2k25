@@ -1,7 +1,7 @@
 "use client";
 
 import { Timeline } from "@/components/ui/timeline";
-import { JSX, useEffect, useState } from "react";
+import { JSX, useEffect } from "react";
 import Image from "next/image";
 import { FaCalendar, FaClock } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
