@@ -44,7 +44,7 @@ const Footer = () => {
               CONTACT
             </p>
             <p className="mt-2 text-[1.125rem]">
-              Somdev Behera (Secretary, Literary Club) : +917978699617 <br />
+              Somdev Behera (Secretary, Literary Club) : +917894049680 <br />
               {/* Satyabrat Panigrahi (Secretary General) : +917853998437 <br /> */}
               Saswat Ranjan Pattnaik (Coordinator, Literary Club) :
               +918249097228 <br />

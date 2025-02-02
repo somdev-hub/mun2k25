@@ -29,10 +29,10 @@ export const timeline = [
     subheading:
       "The delegates will have to research about the country that they have been alloted and the topic that they will be discussing. They will have to prepare a position paper that will be submitted to the executive board.",
     images: [
-      "https://assets.aceternity.com/templates/startup-1.webp",
-      "https://assets.aceternity.com/templates/startup-1.webp",
-      "https://assets.aceternity.com/templates/startup-1.webp",
-      "https://assets.aceternity.com/templates/startup-1.webp"
+      "/assets/timeline/e1.jpg",
+      "/assets/timeline/e2.jpg",
+      "/assets/timeline/E3.jpg",
+      "/assets/timeline/e4.jpg"
     ]
   },
   {
