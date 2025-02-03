@@ -36,14 +36,15 @@ export default function Home() {
           <p>{item.subheading}</p>
           <div className="grid grid-cols-2 gap-4 mt-6">
             {item.images.map((image, index) => (
-              <Image
-                key={index}
-                src={image}
-                alt="startup template"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-              />
+              <div className="overflow-hidden rounded-lg" key={index}>
+                <Image
+                  src={image}
+                  alt="startup template"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] transition-transform duration-300 hover:scale-105"
+                />
+              </div>
             ))}
           </div>
         </div>
@@ -60,15 +61,15 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="mt-[6rem] md:mt-[8rem] px-4 md:px-12 flex flex-col xl:flex-row justify-between items-center">
+      <div
+        data-aos="fade-up"
+        className="mt-[6rem] md:mt-[8rem] px-4 md:px-12 flex flex-col xl:flex-row justify-between items-center"
+      >
         <div className="md:flex-1">
-          <h2
-            className="font-lilita-one text-[2rem] md:text-[2.5rem] sub-shadow-head mb-2"
-            data-aos="fade-up"
-          >
+          <h2 className="font-lilita-one text-[2rem] md:text-[2.5rem] sub-shadow-head mb-2">
             Silicon Literary Club presents
           </h2>
-          <div data-aos="fade-up">
+          <div>
             <span className="text-[5.5rem] md:text-[7.5rem] shadow-head font-lalezar">
               Model United Nations{" "}
             </span>{" "}
@@ -76,22 +77,16 @@ export default function Home() {
               2K25
             </span>
           </div>
-          <h3
-            className="font-lilita-one text-[1.75rem] md:text-[2.5rem] mt-4 md:mt-0"
-            data-aos="fade-up"
-          >
+          <h3 className="font-lilita-one text-[1.75rem] md:text-[2.5rem] mt-4 md:mt-0">
             Shaping Tomorrow Through Diplomacy Today.
           </h3>
-          <Link href="/form" data-aos="fade-up">
+          <Link href="/form">
             <button className="font-lilita-one text-white bg-violet rounded-md px-8 mt-4 py-3 text-[1.25rem] hover:bg-white hover:text-black hover:shadow-xl transition-colors duration-300 flex items-center gap-2 group">
               Register Now
               <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-2" />
             </button>
           </Link>
-          <div
-            className="flex flex-wrap gap-4 md:gap-8 font-lilita-one text-blue mt-6"
-            data-aos="fade-up"
-          >
+          <div className="flex flex-wrap gap-4 md:gap-8 font-lilita-one text-blue mt-6">
             <div className="flex gap-4 items-center text-[1.5rem] md:text-[1.75rem]">
               <FaCalendar />
               <p>22nd Feb 2025</p>
@@ -135,15 +130,18 @@ export default function Home() {
           <p className="text-[1.8rem]">ORGANIZED BY</p>
           <h1 className="text-[2.5rem] text-blue">Silicon Literary Club</h1>
           <p className="mt-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            rerum dicta unde quas consequatur accusamus ad! Minima molestiae,
-            harum provident tempore libero commodi maxime, a ratione enim,
-            tenetur quos inventore vero perferendis! Temporibus incidunt dicta
-            tempore ut accusantium expedita est repellat exercitationem beatae
-            pariatur neque, a atque quas debitis dolorum! Lorem ipsum dolor sit,
-            amet consectetur adipisicing elit. Beatae quasi blanditiis, expedita
-            consequuntur voluptatibus quos eaque repudiandae perferendis
-            voluptas. Magni doloribus debitis nostrum id at?
+            Silicon Literary Club is a student-run society that aims to provide
+            a platform for students to express their thoughts and ideas through
+            various literary activities. The literary club events are organized
+            to give the students literary exposure and to enhance their literary
+            skills in a technical discipline. While hard skills are essential
+            for a successful career, soft skills are equally important. The club
+            aims to provide a platform for students to enhance their soft skills
+            and to give them a platform to showcase their literary talents.
+            Model United Nations is a flagship event of the club that is
+            organized every year where students can showcase their diplomatic
+            skills and knowledge about international affairs. The event is
+            organized by the club members.
           </p>
         </div>
       </div>
@@ -297,7 +295,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mt-[4rem]">
-          <h1 className="text-center text-[2.5rem]">HOUSE OFFICIALS</h1>
+          <h1 className="text-center text-[2.5rem]">EXECUTIVE BOARD</h1>
           <div className="mt-4">
             <div className="flex flex-col md:flex-row w-full gap-8 justify-center">
               {officials.map((person, index) => (

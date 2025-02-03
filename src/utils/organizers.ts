@@ -43,12 +43,12 @@ export const officials: {
   {
     name: "TBA",
     image: "/assets/profile.svg",
-    position: "To Be Announced"
+    position: "Secretary General"
   },
   {
     name: "TBA",
     image: "/assets/profile.svg",
-    position: "To Be Announced"
+    position: "The Honourable Chair"
   }
 ];
 
@@ -59,17 +59,17 @@ export const organizers: {
 }[] = [
   {
     name: "Dr. Tyagraj Thakur",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/tyagraj_sir.jpg",
     position: "FIC, Literary club"
   },
   {
     name: "Mr. Somdev Behera",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/somdev.jpg",
     position: "Secretary, Literary club"
   },
   {
     name: "Mr. Saswat Ranjan Pattnaik",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/saswat.jpg",
     position: "Secretary Amenities"
   },
   {
