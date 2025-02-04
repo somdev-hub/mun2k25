@@ -258,7 +258,7 @@ export default function Home() {
         <div className="">
           <h1 className="text-center text-[2.5rem]">JUDGES</h1>
           <div className="mt-4">
-            <div className="flex flex-col gap-4 sm:grid md:grid-rows-3 md:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 sm:gap-8">
+            <div className="flex flex-col gap-4 sm:grid sm:grid-rows-3 sm:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 sm:gap-8">
               {judges.map((person, index) => (
                 <div
                   data-aos="flip-up"
@@ -297,7 +297,7 @@ export default function Home() {
         <div className="mt-[4rem]">
           <h1 className="text-center text-[2.5rem]">EXECUTIVE BOARD</h1>
           <div className="mt-4">
-            <div className="flex flex-col md:flex-row w-full gap-8 justify-center">
+            <div className="flex flex-col sm:flex-row w-full gap-8 justify-center">
               {officials.map((person, index) => (
                 <div
                   data-aos="flip-up"
@@ -329,7 +329,7 @@ export default function Home() {
         <div className="mt-[4rem]">
           <h1 className="text-center text-[2.5rem]">ORGANIZERS</h1>
           <div className="mt-4">
-            <div className="flex flex-col gap-4 md:grid md:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 md:gap-8">
+            <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 md:gap-8">
               {organizers.map((person, index) => (
                 <div
                   data-aos="flip-up"

@@ -45,7 +45,23 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "MUN 2K25",
   description:
-    " Model United Nations 2K25 is a conference that aims to provide a platform for students to discuss global issues and develop their public speaking and negotiation skills. The conference will be held in 2025, and will feature a variety of committees and topics for students to choose from. Whether you are new to Model UN or an experienced delegate, MUN 2K25 is the perfect opportunity to learn, grow, and connect with other students from around the world."
+    " Model United Nations 2K25 is a conference that aims to provide a platform for students to discuss global issues and develop their public speaking and negotiation skills. The conference will be held in 2025, and will feature a variety of committees and topics for students to choose from. Whether you are new to Model UN or an experienced delegate, MUN 2K25 is the perfect opportunity to learn, grow, and connect with other students from around the world.",
+  openGraph: {
+    title: "MUN 2K25",
+    description:
+      " Model United Nations 2K25 is a conference that aims to provide a platform for students to discuss global issues and develop their public speaking and negotiation skills. The conference will be held in 2025, and will feature a variety of committees and topics for students to choose from. Whether you are new to Model UN or an experienced delegate, MUN 2K25 is the perfect opportunity to learn, grow, and connect with other students from around the world.",
+    url: "https://mun2k25.vercel.app",
+    type: "website",
+    siteName: "mun2k25",
+    images: [
+      {
+        url: "https://beautiful-gold-bison.myfilebase.com/ipfs/QmRd3bCyUqCE8K6ZVpLJGt2vv2GAY6aSxUmVdudvcYhA92",
+        width: 500,
+        height: 300,
+        alt: "MUN 2K25"
+      }
+    ]
+  }
 };
 
 export default function RootLayout({

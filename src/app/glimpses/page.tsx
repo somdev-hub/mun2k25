@@ -166,7 +166,7 @@ const Glimpses = () => {
                     key % 2 == 0 ? "md:flex-row" : "md:flex-row-reverse"
                   } gap-6 mt-4`}
                 >
-                  <div className="w-full md:w-[50%] xl:w-[30%] h-[16rem] relative">
+                    <div className="w-full md:w-[50%] xl:w-[30%] aspect-[4/3] relative">
                     <Image
                       src={item.images[0]}
                       alt="Best Delegate"
@@ -174,8 +174,8 @@ const Glimpses = () => {
                       style={{ objectFit: "cover", borderRadius: "1rem" }}
                       // alt="Best Delegate"
                     />
-                  </div>
-                  <div className=" md:w-[70%]">
+                    </div>
+                  <div className=" md:w-[50%] xl:w-[70%]">
                     <p className="font-days-one text-justify">
                       {item.description[0]}
                     </p>
