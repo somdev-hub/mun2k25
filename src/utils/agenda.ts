@@ -7,7 +7,7 @@ export const agenda: {
 ⦁	Data Privacy and Digital Sovereignty in the Age of AI
 ⦁	Space Governance and the Militarization of Outer Space 
 ⦁	Managing the Economic Fallout of Geopolitical Conflicts 
-⦁	World Peace: ending today’s conflicts to build a peaceful tommorow
+⦁	World Peace: ending today’s conflicts to build a peaceful tomorrow
 ⦁	Achieving Carbon Neutrality by a Global Cooperation Framework 
 ⦁	Addressing the Global Refugee and Migration Crisis 
 ⦁	Balancing Peaceful Use and Security in Nuclear Technology Development 

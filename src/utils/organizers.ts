@@ -99,17 +99,17 @@ export const organizers: {
   },
   {
     name: "Mr. Sourav",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/sourav.jpg",
     position: "Coordinator, Literary club"
   },
   {
     name: "Ms. Asmita Soni",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/asmita.jpg",
     position: "Coordinator, Literary club"
   },
   {
-    name: "Mr. Oshan Kheti",
-    image: "/assets/profile.svg",
+    name: "Mr. Oshan Khati",
+    image: "/assets/organizers/oshan.jpg",
     position: "Coordinator, Literary club"
   }
 ];

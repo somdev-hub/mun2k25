@@ -1,6 +1,6 @@
 export const timeline = [
   {
-    time: "17th Feb, Monday",
+    time: "15th Feb, Saturday",
     heading: " GROUP DISCUSSION PRELIMS",
     subheading:
       "The first day of the conference will be dedicated to the Group Discussion Prelims. The delegates will be divided into groups and will be given a topic to discuss. Top candidates from each groups will be selected for the further rounds. In total 25 candidates will be selected from this round.",
@@ -12,7 +12,7 @@ export const timeline = [
     ]
   },
   {
-    time: "18th Feb, Tuesday",
+    time: "17th Feb, Monday",
     heading: " ALLOTMENT OF COUNTRIES TO SELECTED CANDIDATES",
     subheading:
       "The next day, the selected candidates will be alloted countries that they will be representing on a random basis. The country that they receive will be their country for the rest of the conference.",

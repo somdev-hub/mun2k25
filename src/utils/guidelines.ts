@@ -60,7 +60,7 @@ export const guidelines: {
     {
       title: "How to participate?",
       content:
-        "Students who want to give their participation in the MUN 2K25 must have to register through the official website of the conference. The registration will be live till 15th February 2025. Candidate registration is must in order to participate in the next round. The registration is absolutely free of cost. There is no other way to participate in the conference.",
+        "Students who want to give their participation in the MUN 2K25 must have to register through the official website of the conference. The registration will be live till 14th February (Friday), 2025. Candidate registration is must in order to participate in the next round. The registration is absolutely free of cost. There is no other way to participate in the conference.",
       images: []
     },
     {
@@ -78,13 +78,13 @@ export const guidelines: {
     {
       title: "Position Paper",
       content:
-        "A Position Paper is a crucial document that MUN participants must prepare before the conference. It outlines a country's stance on the given agenda, providing background information, key issues, past actions, and proposed solutions. The paper should be well-researched, concise, and structured into sections, including an introduction, the country’s perspective, and recommended diplomatic strategies. A strong position paper demonstrates a deep understanding of the topic, aids in effective debate, and strengthens a delegate's ability to negotiate and represent their assigned nation convincingly. The Position paper must be crafted within 5 pages and submitted to the organizing committee by 15th 21st February 2025.",
+        "A Position Paper is a crucial document that MUN participants must prepare before the conference. It outlines a country's stance on the given agenda, providing background information, key issues, past actions, and proposed solutions. The paper should be well-researched, concise, and structured into sections, including an introduction, the country’s perspective, and recommended diplomatic strategies. A strong position paper demonstrates a deep understanding of the topic, aids in effective debate, and strengthens a delegate's ability to negotiate and represent their assigned nation convincingly. The Position paper must be crafted within 3 pages(including the front page). The delegates must prepare 5 copies of the position paper and it must be submitted by 21st February, 2025.",
       images: []
     },
     {
       title: "Round 1: Briefing the house",
       content:
-        "In Round 1: Briefing the House, delegates formally introduce their country's stance based on their Position Paper. Each delegate delivers a structured speech, covering key aspects such as their nation’s background, policies, past actions, and proposed solutions related to the given agenda. The speech should be concise, diplomatic, and persuasive, reflecting thorough research and a clear understanding of international relations. This round sets the tone for further discussions, allowing delegates to establish their position and influence the debate. Strong delivery and confident articulation are essential for making a lasting impact.",
+        "In Round 1: Briefing the House, delegates formally introduce their country's stance based on their Position Paper. Each delegate delivers a structured speech, covering key aspects such as their nation’s background, policies, past actions, and proposed solutions related to the given agenda. The speech should be concise, diplomatic, and persuasive, reflecting thorough research and a clear understanding of international relations. This round sets the tone for further discussions, allowing delegates to establish their position and influence the debate. Strong delivery and confident articulation are essential for making a lasting impact. Each delegate will be given (3+1) minutes to present their position paper.",
       images: []
     },
     {
@@ -162,7 +162,7 @@ Steps taken for improvement, both nationally and globally */
     {
       title: "Delegate Rights",
       content:
-        "Delegates have the right to express their opinions freely, participate in debates, and engage in discussions on the agenda topics. They have the right to be treated with respect, regardless of their batch, background and discipline. Delegates reserve the right to outline their country's stance on the issues, agendas and resolutions. They the the right to question other delegates, seek clarifications, and negotiate diplomatically to achieve consensus. Delegates have the right to raise points of order, submit motions, and vote on resolutions in accordance with the rules of procedure. For any discussion or debate, they must maintain a professional demeanor and adhere to the code of conduct. To start a debate, they must raise their placards and seek permission from the chair. If the chair recognizes them, they may begin speaking. If delegate rights are violated, they may raise a point of order to bring attention to the issue.",
+        "Delegates have the right to express their opinions freely, participate in debates, and engage in discussions on the agenda topics. They have the right to be treated with respect, regardless of their batch, background and discipline. Delegates reserve the right to outline their country's stance on the issues, agendas and resolutions. They the the right to question other delegates, seek clarifications, and negotiate diplomatically to achieve consensus. Delegates have the right to raise points of order, submit motions, and vote on resolutions in accordance with the rules of procedure. For any discussion or debate, they must maintain a professional demeanor and adhere to the code of conduct. To start a debate, they must raise their placards and seek permission from the chair. If the chair recognizes them, they may begin speaking. If delegate rights are violated, they may raise a point of order to bring attention to the issue. Delegates are advised to deliver factually accurate information and avoid making unsubstantiated claims. Delegate who seek verification of information may raise a point of personal privilege to request clarification from the chair.",
       images: []
     },
     {
