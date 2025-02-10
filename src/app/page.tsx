@@ -33,7 +33,7 @@ export default function Home() {
           <h2 className="text-[1.75rem] md:text-[2rem] text-violet mb-2">
             {item.heading}
           </h2>
-          <p>{item.subheading}</p>
+          <p className="font-days-one">{item.subheading}</p>
           <div className="grid grid-cols-2 gap-4 mt-6">
             {item.images.map((image, index) => (
               <div className="overflow-hidden rounded-lg" key={index}>
@@ -73,8 +73,8 @@ export default function Home() {
             <span className="text-[5.5rem] md:text-[7.5rem] shadow-head font-lalezar">
               Model United Nations{" "}
             </span>{" "}
-            <span className="text-[4.5rem] md:text-[6rem] shadow-head-sec font-lemon">
-              2K25
+            <span className="text-[4.5rem] md:text-[6rem] shadow-head-sec font-days-one">
+              2025
             </span>
           </div>
           <h3 className="font-lilita-one text-[1.75rem] md:text-[2.5rem] mt-4 md:mt-0">
@@ -118,7 +118,7 @@ export default function Home() {
         data-aos="fade-up"
         className="mt-8 md:mt-12 px-4 md:px-12 py-8 bg-[#eeeeee] flex flex-col lg:flex-row items-center justify-between"
       >
-        <div className="flex-1 flex items-center justify-center mb-8 md:mb-0">
+        <div className="lg:w-[40%] flex items-center justify-center mb-8 md:mb-0">
           <Image
             src={"/assets/literary-logo.svg"}
             height="250"
@@ -126,10 +126,10 @@ export default function Home() {
             alt="Literary Logo"
           />
         </div>
-        <div className="flex-1">
+        <div className="lg:w-[60%]">
           <p className="text-[1.8rem]">ORGANIZED BY</p>
           <h1 className="text-[2.5rem] text-blue">Silicon Literary Club</h1>
-          <p className="mt-4">
+          <p className="mt-4 font-days-one">
             Silicon Literary Club is a student-run society that aims to provide
             a platform for students to express their thoughts and ideas through
             various literary activities. The literary club events are organized

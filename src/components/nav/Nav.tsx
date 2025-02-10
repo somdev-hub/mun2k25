@@ -18,8 +18,8 @@ const Nav = () => {
               >
                 MUN{" "}
               </span>
-              <span className="font-lemon text-white sm-text-shadow-violet text-[2rem] ">
-                2K25
+              <span className="font-days-one text-white sm-text-shadow-violet text-[2rem] ">
+                2025
               </span>
             </div>
           </Link>

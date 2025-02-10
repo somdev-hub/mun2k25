@@ -27,9 +27,15 @@ export default async function CreateParticipant(
       return res.status(400).json({ message: "Please fill all the fields" });
     }
 
-    const existingParticipant = await Participants.findOne({ email: email });
-    if (existingParticipant) {
-      return res.status(400).json({ message: "Participant already exists" });
+    const existingParticipantWithEmail = await Participants.findOne({
+      email: email
+    });
+    if (existingParticipantWithEmail) {
+      return res.status(400).json({ message: "Participant with this email already exists" });
+    }
+    const existingParticipantWithSIC = await Participants.findOne({ sic: sic });
+    if (existingParticipantWithSIC) {
+      return res.status(400).json({ message: "Participant with this SIC already exists" });
     }
 
     const newParticipant = new Participants({

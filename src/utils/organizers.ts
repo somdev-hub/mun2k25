@@ -72,28 +72,43 @@ export const organizers: {
     image: "/assets/organizers/saswat.jpg",
     position: "Secretary Amenities"
   },
-  {
-    name: "Mr. Ankit Roy",
-    image: "/assets/profile.svg",
-    position: "Secretary Academics"
-  },
+  // {
+  //   name: "Mr. Ankit Roy",
+  //   image: "/assets/profile.svg",
+  //   position: "Secretary Academics"
+  // },
   {
     name: "Ms. Muskan Kumari",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/muskan.jpg",
     position: "Coordinator, Literary club"
   },
   {
     name: "Mr. Amlan Abhijeet Mishra",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/amlan.jpg",
     position: "Joint-Secretary, Literary club"
   },
   {
     name: "Mr. Rudra Prasad Das",
-    image: "/assets/profile.svg",
+    image: "/assets/organizers/rudra.png",
     position: "Coordinator, Literary club"
   },
   {
     name: "Ms. Alisha Patel",
+    image: "/assets/organizers/alisha.jpg",
+    position: "Coordinator, Literary club"
+  },
+  {
+    name: "Mr. Sourav",
+    image: "/assets/profile.svg",
+    position: "Coordinator, Literary club"
+  },
+  {
+    name: "Ms. Asmita Soni",
+    image: "/assets/profile.svg",
+    position: "Coordinator, Literary club"
+  },
+  {
+    name: "Mr. Oshan Kheti",
     image: "/assets/profile.svg",
     position: "Coordinator, Literary club"
   }
