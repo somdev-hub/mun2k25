@@ -63,7 +63,7 @@ export default function Home() {
     <div className="">
       <div
         data-aos="fade-up"
-        className="mt-[6rem] md:mt-[8rem] px-4 md:px-12 flex flex-col xl:flex-row justify-between items-center"
+        className="mt-[6rem] md:mt-[8rem] px-4 lg:px-12 flex flex-col xl:flex-row justify-between items-center"
       >
         <div className="md:flex-1">
           <h2 className="font-lilita-one text-[2rem] md:text-[2.5rem] sub-shadow-head mb-2">
@@ -116,7 +116,7 @@ export default function Home() {
 
       <div
         data-aos="fade-up"
-        className="mt-8 md:mt-12 px-4 md:px-12 py-8 bg-[#eeeeee] flex flex-col lg:flex-row items-center justify-between"
+        className="mt-8 md:mt-12 px-4 lg:px-12 py-8 bg-[#eeeeee] flex flex-col lg:flex-row items-center justify-between"
       >
         <div className="lg:w-[40%] flex items-center justify-center mb-8 md:mb-0">
           <Image
@@ -157,7 +157,7 @@ export default function Home() {
 
       <div
         data-aos="fade-up"
-        className="mt-[6rem] px-8 lg:px-[8rem] py-[4rem] bg-[#eeeeee]"
+        className="mt-[6rem] px-4 lg:px-[8rem] py-[4rem] bg-[#eeeeee]"
       >
         <h1 className="text-center text-[2.25rem] md:text-[2.5rem]">
           COMMITTEES
@@ -329,7 +329,7 @@ export default function Home() {
         <div className="mt-[4rem]">
           <h1 className="text-center text-[2.5rem]">ORGANIZERS</h1>
           <div className="mt-4">
-            <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 md:gap-8">
+            <div className="flex flex-col  gap-4 sm:grid sm:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 md:gap-8">
               {organizers.map((person, index) => (
                 <div
                   data-aos="flip-up"

@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "mun2025",
     images: [
       {
-        url: "https://beautiful-gold-bison.myfilebase.com/ipfs/QmRd3bCyUqCE8K6ZVpLJGt2vv2GAY6aSxUmVdudvcYhA92",
+        url: "https://beautiful-gold-bison.myfilebase.com/ipfs/QmenDVdiuRb9mEHMv1EvuLude7BWUHahubAKAEKhv1EhFn",
         width: 500,
         height: 300,
         alt: "MUN 2025"
