@@ -234,8 +234,9 @@ const FormPage = () => {
               <button
                 type="submit"
                 className="bg-pink rounded-md w-full mt-8 text-white font-lilita-one py-2 shadow-md hover:bg-violet transition-all duration-300"
+                disabled={form.formState.isSubmitting}
               >
-                Submit
+                {form.formState.isSubmitting ? "Submitting..." : "Submit"}
               </button>
             </form>
           </Form>

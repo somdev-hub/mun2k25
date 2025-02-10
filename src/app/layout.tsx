@@ -50,13 +50,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MUN 2025",
     description:
-      " Model United Nations 2K25 is a conference that aims to provide a platform for students to discuss global issues and develop their public speaking and negotiation skills. The conference will be held in 2025, and will feature a variety of committees and topics for students to choose from. Whether you are new to Model UN or an experienced delegate, MUN 2K25 is the perfect opportunity to learn, grow, and connect with other students from around the world.",
+      "Model United Nations 2K25 is a conference that aims to provide a platform for students to discuss global issues and develop their public speaking and negotiation skills. The conference will be held in 2025, and will feature a variety of committees and topics for students to choose from. Whether you are new to Model UN or an experienced delegate, MUN 2K25 is the perfect opportunity to learn, grow, and connect with other students from around the world.",
     url: "https://mun2025.sitwestevents.live",
     type: "website",
-    siteName: "mun2k25",
+    siteName: "mun2025",
     images: [
       {
-        url: "https://beautiful-gold-bison.myfilebase.com/ipfs/QmNLv4i7u4bvhwyUsryXe4GNUEND3FADRvTdFJqcsBvTVb",
+        url: "https://beautiful-gold-bison.myfilebase.com/ipfs/QmRd3bCyUqCE8K6ZVpLJGt2vv2GAY6aSxUmVdudvcYhA92",
         width: 500,
         height: 300,
         alt: "MUN 2025"
