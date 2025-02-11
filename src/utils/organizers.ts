@@ -68,6 +68,11 @@ export const organizers: {
     position: "Secretary, Literary club"
   },
   {
+    name: "Mr. Ankit Roy",
+    image: "/assets/organizers/ankit.jpg",
+    position: "Secretary Academics"
+  },
+  {
     name: "Mr. Saswat Ranjan Pattnaik",
     image: "/assets/organizers/saswat.jpg",
     position: "Secretary Amenities"
