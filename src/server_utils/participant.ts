@@ -19,6 +19,7 @@ const ParticipantSchema = new Schema({
     type: String,
     required: true
   },
+  // branch in CSE,ME,EE,ECE,CE
   branch: {
     type: String,
     required: true

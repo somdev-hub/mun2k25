@@ -1,7 +1,9 @@
+// filepath: /c:/Users/ariel/OneDrive/Desktop/projects/mun2k25/mun2k25-next/src/pages/api/create-participant.ts
 import Participants from "../../server_utils/participant";
 import { NextApiRequest, NextApiResponse } from "next";
 import connectDB from "../../server_utils/connectDB";
 import Cors from "cors";
+import csrf from "csrf";
 
 interface Participant {
   name: string;
@@ -52,6 +54,13 @@ export default async function CreateParticipant(
   }
 
   try {
+    const tokens = new csrf();
+    const secret = process.env.CSRF_SECRET || tokens.secretSync();
+    const csrfToken = req.headers["csrf-token"] as string;
+    if (!tokens.verify(secret, csrfToken)) {
+      return res.status(403).json({ error: "Invalid token" });
+    }
+
     const { name, email, phone, year, branch, sic }: Participant = req.body;
     if (!name || !email || !phone || !year || !branch || !sic) {
       return res.status(400).json({ message: "Please fill all the fields" });
@@ -62,9 +71,7 @@ export default async function CreateParticipant(
       return res.status(400).json({ message: "SIC format is invalid" });
     }
 
-    // branch in CSE,ME,EE,ECE,CE
     const branchPattern = /^(CSE|ME|EE|ECE|CE)$/;
-
     if (!branchPattern.test(branch)) {
       return res.status(400).json({ message: "Branch is invalid" });
     }

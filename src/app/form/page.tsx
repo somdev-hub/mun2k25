@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -60,6 +60,14 @@ const FormPage = () => {
       phone: ""
     }
   });
+  const [csrfToken, setCsrfToken] = useState("");
+
+  useEffect(() => {
+    // Fetch the CSRF token from the server
+    fetch("/api/csrf-token")
+      .then((res) => res.json())
+      .then((data) => setCsrfToken(data.csrfToken));
+  }, []);
 
   const [registrationStatus, setRegistrationStatus] = useState({
     status: false,
@@ -74,7 +82,8 @@ const FormPage = () => {
       const res = await fetch("/api/create-participant", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          "CSRF-Token": csrfToken // Include the CSRF token in the headers
         },
         body: JSON.stringify(values)
       });
@@ -230,7 +239,6 @@ const FormPage = () => {
                 )}
               />
 
-              {/* <Button type="submit">Submit</Button> */}
               <button
                 type="submit"
                 className="bg-pink rounded-md w-full mt-8 text-white font-lilita-one py-2 shadow-md hover:bg-violet transition-all duration-300"
