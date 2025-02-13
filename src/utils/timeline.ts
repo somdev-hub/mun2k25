@@ -24,7 +24,7 @@ export const timeline = [
     ]
   },
   {
-    time: "18th-8th Mar",
+    time: "18th Feb - 8th Mar",
     heading: "Preparation and research. Crafting the position paper",
     subheading:
       "The delegates will have to research about the country that they have been alloted and the topic that they will be discussing. They will have to prepare a position paper that will be submitted to the executive board.",
