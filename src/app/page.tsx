@@ -89,7 +89,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-4 md:gap-8 font-lilita-one text-blue mt-6">
             <div className="flex gap-4 items-center text-[1.5rem] md:text-[1.75rem]">
               <FaCalendar />
-              <p>22nd Feb 2025</p>
+              <p>8th Mar, 2025</p>
             </div>
             <div className="flex gap-4 items-center text-[1.5rem] md:text-[1.75rem]">
               <FaClock />

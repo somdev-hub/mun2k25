@@ -24,7 +24,7 @@ export const timeline = [
     ]
   },
   {
-    time: "18th-22nd Feb",
+    time: "18th-8th Mar",
     heading: "Preparation and research. Crafting the position paper",
     subheading:
       "The delegates will have to research about the country that they have been alloted and the topic that they will be discussing. They will have to prepare a position paper that will be submitted to the executive board.",
@@ -36,7 +36,7 @@ export const timeline = [
     ]
   },
   {
-    time: "22nd Feb, Round 1",
+    time: "8th Mar, Round 1",
     heading: "Briefing the House (Moderated Caucuses)",
     subheading:
       "The first round of the conference is the briefing of the house. The delegates will be given a chance to present their position papers and will be given a chance to speak about the topic that they will be discussing. ",
@@ -48,7 +48,7 @@ export const timeline = [
     ]
   },
   {
-    time: "22nd Feb, Round 2",
+    time: "8th Mar, Round 2",
     heading: "Open House (Unmoderated Caucuses)",
     subheading:
       "In the second round, delegates can ask questions to each other and engage in debates and discussions. They can pass motions and engage in debates.",
@@ -60,7 +60,7 @@ export const timeline = [
     ]
   },
   {
-    time: "22nd Feb, Round 3",
+    time: "8th Mar, Round 3",
     heading: "Jury’s Shoot",
     subheading:
       "In the final round, the jury will take the privilege to ask questions to the delegates. The delegates have to answer their questions.",
