@@ -4,34 +4,22 @@ export const judges: {
   position: string;
 }[] = [
   {
-    name: "TBA",
-    image: "/assets/profile.svg",
-    position: "To Be Announced"
+    name: "Mr. Binaraka Mishra",
+    image: "/assets/organizers/binayaka-mishra.jpg",
+    position:
+      "Public Relations Officer, Panchayati Raj & Drinking Water Dept., Rural Development Dept., Govt. of Odisha"
   },
   {
-    name: "TBA",
-    image: "/assets/profile.svg",
-    position: "To Be Announced"
+    name: "Dr. Simanchal Bag",
+    image: "/assets/organizers/simanchal-sir.jpg",
+    position:
+      "Asst. Professor of Economics, Silicon Institute of Technology, Sambalpur"
   },
   {
-    name: "TBA",
-    image: "/assets/profile.svg",
-    position: "To Be Announced"
-  },
-  {
-    name: "TBA",
-    image: "/assets/profile.svg",
-    position: "To Be Announced"
-  },
-  {
-    name: "TBA",
-    image: "/assets/profile.svg",
-    position: "To Be Announced"
-  },
-  {
-    name: "TBA",
-    image: "/assets/profile.svg",
-    position: "To Be Announced"
+    name: "Mrs. Sonalika Mishra",
+    image: "/assets/organizers/sonalika-maam.jpg",
+    position:
+      "Asst. Professor in Electrical Engineering, Silicon Institute of Technology, Sambalpur"
   }
 ];
 
@@ -41,13 +29,13 @@ export const officials: {
   position: string;
 }[] = [
   {
-    name: "TBA",
-    image: "/assets/profile.svg",
+    name: "Mr. Somdev Behera",
+    image: "/assets/organizers/somdev.jpg",
     position: "Secretary General"
   },
   {
-    name: "TBA",
-    image: "/assets/profile.svg",
+    name: "Mr. Amlan Abhijeet Mishra",
+    image: "/assets/organizers/amlan.jpg",
     position: "The Honourable Chair"
   }
 ];

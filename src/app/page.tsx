@@ -97,7 +97,7 @@ export default function Home() {
             </div>
             <div className="flex gap-4 items-center text-[1.5rem] md:text-[1.75rem]">
               <MdLocationPin />
-              <p>Gallery 1</p>
+              <p>Seminar Hall</p>
             </div>
           </div>
         </div>
@@ -258,7 +258,7 @@ export default function Home() {
         <div className="">
           <h1 className="text-center text-[2.5rem]">JUDGES</h1>
           <div className="mt-4">
-            <div className="flex flex-col gap-4 sm:grid sm:grid-rows-3 sm:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 sm:gap-8">
+            <div className="flex flex-col gap-4 sm:grid sm:grid-rows-2 sm:grid-cols-2 xl:grid-rows-1 xl:grid-cols-3 sm:gap-8">
               {judges.map((person, index) => (
                 <div
                   data-aos="flip-up"
@@ -275,7 +275,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="w-[80%] py-2 px-4 overflow-hidden">
-                    <h2 className="text-[1.5rem] font-lilita-one">
+                    <h2 className="text-[1.25rem] font-lilita-one">
                       {person.name}
                     </h2>
                     <div className="marquee">
@@ -314,7 +314,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="py-2 ml-4">
-                    <h2 className="text-[1.5rem] font-lilita-one">
+                    <h2 className="text-[1.25rem] font-lilita-one">
                       {person.name}
                     </h2>
                     <p className="] font-montserrat font-[600]">

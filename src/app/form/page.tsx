@@ -149,7 +149,7 @@ const FormPage = () => {
                   <FormItem>
                     <FormLabel className="text-lg">Email</FormLabel>
                     <FormControl>
-                      <Input className="text-lg" placeholder=" " {...field} />
+                      <Input className="text-lg" placeholder=" " {...field}  />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

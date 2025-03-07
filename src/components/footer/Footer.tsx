@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="">
             <p className="font-[600] text-[1.5rem] underline">VENUE</p>
             <p className=" mt-2 text-[1.125rem]">
-              Gallery 1, <br />
+              Seminar Hall, <br />
               Silicon Institute of Technology <br />
               Silicon West, Sason, Sambalpur, Odisha, Pin: 768200
             </p>
